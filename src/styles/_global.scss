@@ -2,10 +2,11 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: red;
+    background-color:#d1ecec;
 }
 
 h1 {

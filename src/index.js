@@ -1,8 +1,6 @@
 import './styles/index.scss'
-const superHero= {name: "superman", age: 39}
-const editedHero = {...superHero, powers: "fly", age: 38}
-const obj = {a: 1, b: 2}
+import {render} from 'react-dom'
+import App from './components/App'
 
-console.log(superHero)
-console.log(editedHero)
-console.log(obj)
+
+render(<App />, document.getElementById("root"))
