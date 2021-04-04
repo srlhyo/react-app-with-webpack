@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'profile';
 
 body {
     display: flex;
@@ -12,4 +13,8 @@ body {
 h1 {
     padding: 1em;
     background-color: peachpuff;
+}
+
+ul {
+    list-style-image: url(../images/food.png);
 }

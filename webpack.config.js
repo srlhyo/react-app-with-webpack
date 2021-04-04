@@ -11,12 +11,24 @@ if(process.env.NODE_ENV == "production") {
 module.exports = {
     mode: mode,
     target: target,
+    output: {
+        assetModuleFilename: "images/[hash][ext][query]"
+    },
     devtool: "source-map",
     module: {
         rules: [
             {
+                test: /\.(jpe?g|png|svg|gif)$/i,
+                type: "asset"
+            },
+            {
                 test: /\.(s[ac]|c)ss$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader','sass-loader']
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    'css-loader', 
+                    'postcss-loader',
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.jsx?$/,
